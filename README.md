@@ -1,25 +1,21 @@
 
 # Simple Shopping Cart System
 
-This project is a simple command-line shopping cart system written in C. It allows users to sign up, log in, view a catalog of products, add products to the shopping cart, remove items from the cart, and place an order. The user authentication and product data are stored in text files (`users.txt` and `products.txt`).
+This project is a simple command-line shopping cart system written in C. It allows users to sign up, log in, view a catalog of products, add products to the shopping cart, remove items from the cart, and place an order. The user authentication and product data are stored in text files.
 
 ## Features
 
 - **User Authentication**: Users can sign up, log in, and authenticate with a username and password.
 - **Product Catalog**: A list of products with names and prices that users can view and select from.
 - **Shopping Cart**: Users can add items to their shopping cart, view the cart, remove items, and place an order.
-- **Data Persistence**: User information and product details are saved and loaded from text files (`users.txt` and `products.txt`).
-
-## Prerequisites
-
-To compile and run this project, you need a C/C++ development environment. No external libraries are required, as the program uses standard C libraries for file I/O and string manipulation.
+- **Data Persistence**: User information and product details are saved and loaded from text files.
 
 ## Compilation & Setup
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/shopping-cart.git
-   cd shopping-cart
+   git clone https://github.com/umashankar-11/simple-e-commerce-system-design-using-c-language/.git
+   cd simple-e-commerce-system-design-using-c-language/
    ```
 
 2. Compile the code using a C compiler (e.g., `gcc`):
@@ -100,5 +96,5 @@ You can modify these constants in the code to change the limits.
 
 
 ### OUTPUT
-{}(>
-)
+![Screenshot of Code](screenshot-c-project.png)
+
