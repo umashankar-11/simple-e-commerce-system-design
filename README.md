@@ -20,24 +20,14 @@ This project is a simple command-line shopping cart system written in C. It allo
 
 2. Compile the code using a C compiler (e.g., `gcc`):
    ```bash
-   gcc -o shopping_cart shopping_cart.c
+   gcc -o main.c
    ```
 
 3. Run the executable:
    ```bash
-   ./shopping_cart
+   ./main
    ```
-
-4. Before starting, make sure the `products.txt` file exists with product data. You can manually create the file with products, for example:
-
-   ```
-   Laptop 999.99
-   Smartphone 599.99
-   Headphones 199.99
-   ```
-
-5. The `users.txt` file will be automatically created when users sign up. The format will store the username and password of each user.
-
+   
 ## How It Works
 
 1. **User Authentication**:
