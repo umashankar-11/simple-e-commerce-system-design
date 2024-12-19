@@ -8,7 +8,7 @@
 #define MAX_PRODUCT_NAME_LEN 100
 #define MAX_CART_ITEMS 10
 
-// Structs for User, Product, and CartItem
+
 typedef struct {
     char username[MAX_USERNAME_LEN];
     char password[MAX_PASSWORD_LEN];
@@ -24,17 +24,17 @@ typedef struct {
     int quantity;
 } CartItem;
 
-// Global arrays to store users, products, and the cart
+
 User users[MAX_USERS];
 Product products[MAX_PRODUCTS];
 CartItem cart[MAX_CART_ITEMS];
 
-// Counters to keep track of users, products, and cart items
+
 int userCount = 0;
 int productCount = 0;
 int cartItemCount = 0;
 
-// Function to load users from file
+
 void loadUsers() {
     FILE *file = fopen("users.txt", "r");
     if (file == NULL) return;
@@ -46,7 +46,7 @@ void loadUsers() {
     fclose(file);
 }
 
-// Function to save users to file
+
 void saveUsers() {
     FILE *file = fopen("users.txt", "w");
     for (int i = 0; i < userCount; i++) {
@@ -55,7 +55,7 @@ void saveUsers() {
     fclose(file);
 }
 
-// Authenticate user by checking username and password
+
 int authenticate(char *username, char *password) {
     for (int i = 0; i < userCount; i++) {
         if (strcmp(users[i].username, username) == 0 && strcmp(users[i].password, password) == 0) {
@@ -65,7 +65,7 @@ int authenticate(char *username, char *password) {
     return 0;
 }
 
-// Function to handle user signup
+
 void signup() {
     if (userCount >= MAX_USERS) {
         printf("User limit reached.\n");
@@ -85,7 +85,7 @@ void signup() {
     printf("Signup successful!\n");
 }
 
-// Function to handle user login
+
 int login() {
     char username[MAX_USERNAME_LEN], password[MAX_PASSWORD_LEN];
     printf("Enter username: ");
@@ -102,7 +102,7 @@ int login() {
     }
 }
 
-// Function to load products from file
+
 void loadProducts() {
     FILE *file = fopen("products.txt", "r");
     if (file == NULL) return;
@@ -114,7 +114,7 @@ void loadProducts() {
     fclose(file);
 }
 
-// Function to display all available products
+
 void displayProducts() {
     printf("Product Catalog:\n");
     for (int i = 0; i < productCount; i++) {
@@ -122,7 +122,7 @@ void displayProducts() {
     }
 }
 
-// Function to add an item to the shopping cart
+
 void addToCart(int productIndex, int quantity) {
     if (cartItemCount < MAX_CART_ITEMS) {
         cart[cartItemCount].productIndex = productIndex;
@@ -134,7 +134,7 @@ void addToCart(int productIndex, int quantity) {
     }
 }
 
-// Function to view the shopping cart
+
 void viewCart() {
     printf("Shopping Cart:\n");
     float total = 0;
@@ -146,7 +146,7 @@ void viewCart() {
     printf("Total: $%.2f\n", total);
 }
 
-// Function to remove an item from the cart
+
 void removeFromCart(int index) {
     if (index < 0 || index >= cartItemCount) {
         printf("Invalid cart item.\n");
@@ -159,7 +159,7 @@ void removeFromCart(int index) {
     printf("Item removed from cart.\n");
 }
 
-// Function to place the order and clear the cart
+
 void placeOrder() {
     printf("Placing order...\n");
     viewCart();
@@ -167,7 +167,7 @@ void placeOrder() {
     cartItemCount = 0;  // Clear cart after placing order
 }
 
-// Function to display the menu options
+
 void displayMenu() {
     printf("\n1. Login\n");
     printf("2. Signup\n");
@@ -179,7 +179,7 @@ void displayMenu() {
     printf("8. Exit\n");
 }
 
-// Main function to run the program
+
 int main() {
     loadUsers();
     loadProducts();
