@@ -1,5 +1,5 @@
 
-# Simple Shopping Cart System
+# Simple e commerce system design
 
 This project is a simple command-line shopping cart system written in C. It allows users to sign up, log in, view a catalog of products, add products to the shopping cart, remove items from the cart, and place an order. The user authentication and product data are stored in text files.
 
